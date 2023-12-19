@@ -1,0 +1,22 @@
+main {
+    background-color: rgb(247, 240, 240);
+    article {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+            width: 100vh;
+            border-radius: 5px;
+            border: 1px red solid;
+            padding: 0 3%;
+            .myDEVLetters{
+                color:gray;
+                font-size: smaller;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
