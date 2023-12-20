@@ -1,44 +1,130 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <link rel="apple-touch-icon" sizes="76x76" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Reto 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Discussion Threads</title>
 </head>
 <body>
-    <!-- Nav Brayan -->
-    <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-2">
-          <div class="col-md-3 mb-2 mb-md-0">
-            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-              <img src="favicon-32x32.png" height="40" alt="">
-            </a>
-          </div>
+
+<div class="discussion-container">
     
-          <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-light">Log in</button>
-            <button type="button" class="btn btn-outline-primary me-2">Create account</button>
-          </div>
-        </header>
-      </div>
+    <div class="discussion-box" id="discuss">
+        <div class="discussion-header">
+            <h3>#discuss</h3>
+            <p>Discussion threads targeting the whole community</p>
+        </div>
 
+        <div class="discussion-thread">
+            <h3>Open Source Impact: Reflecting on 2023 Contributions</h3>
+            <p>2 comments</p>
+        </div>
 
-    <!-- Main -->
+        <div class="discussion-thread">
+            <h3>🎬🍿What's Your Favorite Holiday Film?</h3>
+            <p>12 comments</p>
+        </div>
 
-    <!-- Left side Angel -->
+        <div class="discussion-thread">
+            <h3>Is tech boring lately or is it me?? 😐</h3>
+            <p>7 comments</p>
+        </div>
 
-    <!-- Rigth side Kevin-->
+        <div class="discussion-thread">
+            <h3>Meme Monday</h3>
+            <p>2 comments</p>
+        </div>
 
+        <div class="discussion-thread">
+            <h3>Frontend devs, what are your thoughts on WordPress? Have you used it in your corporate jobs?</h3>
+            <p>27 comments</p>
+        </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   
+    <div class="discussion-box" id="watercooler">
+        <div class="discussion-header">
+            <h2>#watercooler</h2>
+            <p>Light, and off-topic conversation.</p>
+        </div>
+
+        <div class="discussion-thread">
+            <h3>Is tech boring lately or is it me?? 😐</h3>
+            <p>7 comments</p>
+        </div>
+
+        <div class="discussion-thread">
+            <h3>Meme Monday</h3>
+            <p>2 comments</p>
+        </div>
+
+        <div class="discussion-thread">
+            <h3>Music Monday — What are you listening to? (Beats Edition)</h3>
+            <p>11 comments</p>
+        </div>
+
+        <div class="discussion-thread">
+            <h3>Caption This! 🤔💭</h3>
+            <p>7 comments</p>
+        </div>
+    </div>
+
+    
+    <div class="transparent-box">
+        <div class="transparent-header">
+            <h2>Trending Guides/Resources</h2>
+        </div>
+
+        <p>Say Goodbye to Docker Volumes 👋</p>
+        <p>19 GitHub Repositories Every Developer Should Bookmark 📚👍</p>
+        <p>50 ways to bring in extra cash as a developer 💰</p>
+        <p>🔝 10 Open-Source Trending GitHub Repositories 📈</p>
+        <p>Why you should never use an UUID as the primary key in SQL Databases</p>
+        <p>12 Senior Developer Traits Juniors Need To Master 🔥</p>
+        <p>Explaining Kubernetes To My Uber Driver</p>
+        <p>My 3 Rules for Documenting Code</p>
+        <p>What's new in Angular 17</p>
+        <p>Five tools to add to your K8s cluster</p>
+        <p>Develop the right thing every time and become a 10x engineer 🏆: The art of writing RFCs 🥋</p>
+        <p>🎁 Shortcut to Find Open Source Projects 100x faster</p>
+        <p>Explaining SSH to my Uber Driver</p>
+        <p>🔥14 Excellent Open-source Projects for Developers🚀</p>
+        <p>Building a Microservices Cloud Backend using Go and PostgreSQL</p>
+        <p>Monorepo, Poly-repo, or No Repo at all?</p>
+        <p>⚡⚡ Level Up Your Cloud Experience with These 7 Open Source Projects 🌩️</p>
+        <p>How To Build a Web Application with HTMX and Go</p>
+        <p>Best Way to Learn Web Development</p>
+        <a class="crayons-link crayons-link--contentful" href="/therubberduckiee/explaining-kubernetes-to-my-uber-driver-4f60">
+            Explaining Kubernetes To My Uber Driver
+          </a>
+        <p>Seaborn Multiple Plots</p>
+
+        <h4>Recently Queried</h4>
+        <p>React Native Build APK</p>
+        <p>Javascript Set CSS</p>
+        <p>Flask MongoDB</p>
+        <p>Opengl Python</p>
+        <p>GCC for Windows</p>
+        <p>Production Environment</p>
+        <p>Git Revert File</p>
+        <p>Clean Architecture</p>
+        <p>JavaScript Sort Array</p>
+        <p>Color Palette Generator From Image</p>
+        <p>Git Revert Pushed Commit</p>
+        <p>Windows Keyboard on Mac</p>
+        <p>JavaScript Playground</p>
+        <p>Supertest Jest</p>
+        <p>Stop Node Server</p>
+        <p>Fetch API</p>
+        <p>Object.entries Javascript</p>
+        <p>Haiku Checker</p>
+        <p>Best VSCode Themes</p>
+        
+    </div>
+
+    <div class="scroll-bar"></div>
+</div>
+
 </body>
 </html>
