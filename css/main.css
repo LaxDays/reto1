@@ -13,25 +13,41 @@ main article {
   justify-content: center;
   align-items: center;
 }
-main article div {
+main article .myPost {
   width: 100vh;
   border-radius: 5px;
-  border: 1px red solid;
   padding: 0 3%;
 }
-main article div .myDEVLetters {
+main article .myPost .myDEVLetters {
   color: gray;
   font-size: smaller;
 }
-main article div img {
+main article .myPost #imagenDEV {
   width: 100%;
+}
+main article #imagenProgramador {
+  height: 15px;
+  width: 15px;
+}
+main article #nombrePublicacion {
+  margin-left: 4%;
+}
+main article #fondoVerde {
+  width: 65px;
+  background-color: rgb(208, 247, 208);
+  margin-left: 4%;
 }
 main article .myContainerIconsEtc {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 main article .myContainerIconsEtc .iconsContainer {
   display: flex;
+  flex-wrap: wrap;
+  flex-basis: content;
+  margin: 0 4% 0 4%;
+}
+main article .myContainerIconsEtc .tiempoLeido {
+  font-size: 14px;
+  margin-left: 30%;
 }/*# sourceMappingURL=main.css.map */
