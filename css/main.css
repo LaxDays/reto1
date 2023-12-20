@@ -25,4 +25,13 @@ main article div .myDEVLetters {
 }
 main article div img {
   width: 100%;
+}
+main article .myContainerIconsEtc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main article .myContainerIconsEtc .iconsContainer {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */

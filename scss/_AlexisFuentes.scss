@@ -20,8 +20,14 @@ main {
         }
     }
     article{
-        .multiple_reactions_icons_container{
-            display:flex;
+        .myContainerIconsEtc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+            .iconsContainer{
+                display:flex;
+            }
         }
     }
 }
