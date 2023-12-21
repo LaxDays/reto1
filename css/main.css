@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body .navBar {
+  background-color: white;
+  z-index: 10;
+}
+
 main {
   background-color: rgb(247, 240, 240);
 }
@@ -25,16 +30,26 @@ main article .myPost .myDEVLetters {
 main article .myPost #imagenDEV {
   width: 100%;
 }
-main article .myContainerIconsEtc {
+main article .usuarioPublicacion {
   display: flex;
-  flex-wrap: wrap;
 }
-main article .myContainerIconsEtc #imagenProgramador {
+main article .usuarioPublicacion .imagenProgramador {
   margin: 4%;
   margin-bottom: 2%;
   height: 50px;
   width: 70px;
   border-radius: 50%;
+}
+main article .usuarioPublicacion .textoUsuario {
+  margin-left: 10px;
+}
+main article .usuarioPublicacion .textoFechaPublicacion {
+  color: gray;
+  margin: 1% 0% 0% 10px;
+}
+main article .myContainerIconsEtc {
+  display: flex;
+  flex-wrap: wrap;
 }
 main article .myContainerIconsEtc #nombrePublicacion {
   margin-left: 4%;

@@ -19,19 +19,29 @@ main {
         }
     }
     article {
-            
-        .myContainerIconsEtc{
-            display: flex;
-            flex-wrap: wrap;
-            
-            
-            #imagenProgramador{
+        .usuarioPublicacion{
+            display:flex;
+           
+            .imagenProgramador{
                 margin: 4% ;
                 margin-bottom: 2%;
                 height: 50px;
                 width: 70px;
                 border-radius: 50%;
+            } 
+            .textoUsuario{
+                margin-left: 10px;
             }
+            .textoFechaPublicacion{
+                color:gray;
+                margin: 1% 0% 0% 10px;
+            }
+        }
+        
+        
+        .myContainerIconsEtc{
+            display: flex;
+            flex-wrap: wrap;
             #nombrePublicacion{
                 margin-left: 4%;
             }
@@ -54,4 +64,3 @@ main {
         }    
     }
 }
-
