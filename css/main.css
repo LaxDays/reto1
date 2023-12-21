@@ -25,39 +25,50 @@ main article .myPost .myDEVLetters {
 main article .myPost #imagenDEV {
   width: 100%;
 }
-main article #imagenProgramador {
-  height: 15px;
-  width: 15px;
-}
-main article #nombrePublicacion {
-  margin-left: 4%;
-}
-main article #fondoVerde {
-  width: 65px;
-  background-color: rgb(208, 247, 208);
-  margin-left: 4%;
-}
 main article .myContainerIconsEtc {
   display: flex;
   flex-wrap: wrap;
+}
+main article .myContainerIconsEtc #imagenProgramador {
+  margin: 4%;
+  margin-bottom: 2%;
+  height: 50px;
+  width: 70px;
+  border-radius: 50%;
+}
+main article .myContainerIconsEtc #nombrePublicacion {
+  margin-left: 4%;
+}
+main article .myContainerIconsEtc #fondoVerde {
+  width: 65px;
+  background-color: rgb(208, 247, 208);
+  margin-left: 4%;
 }
 main article .myContainerIconsEtc .iconsContainer {
   display: flex;
   flex-wrap: wrap;
   flex-basis: content;
-  margin: 0 4% 0 4%;
+  margin: 0 4% 4% 8%;
 }
 main article .myContainerIconsEtc .tiempoLeido {
   font-size: 14px;
-  margin-left: 30%;
+  margin-left: 18%;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 body .aside1 {
   width: 15%;
   margin: 10px;
 }
+@media screen and (max-width: 576px) {
+  body .aside1 {
+    display: none;
+  }
+}
 body .aside1 .container {
   border-radius: 5px;
   padding: 13px;
-  border: solid red;
   margin: 10px;
 }
 body .aside1 .container .createacc {
@@ -126,7 +137,6 @@ body .aside1 .hashtags .poplist {
 body .aside1 .community {
   border-radius: 5px;
   padding: 13px;
-  border: solid red;
   margin: 10px;
 }
 body .aside1 .community .modimg {

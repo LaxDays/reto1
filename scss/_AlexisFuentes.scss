@@ -19,35 +19,39 @@ main {
         }
     }
     article {
-        #imagenProgramador{
-            height: 15px;
-            width: 15px;
-        }
-        #nombrePublicacion{
-            margin-left: 4%;
-        }
+            
+        .myContainerIconsEtc{
+            display: flex;
+            flex-wrap: wrap;
+            
+            
+            #imagenProgramador{
+                margin: 4% ;
+                margin-bottom: 2%;
+                height: 50px;
+                width: 70px;
+                border-radius: 50%;
+            }
+            #nombrePublicacion{
+                margin-left: 4%;
+            }
             #fondoVerde {
                 width: 65px;
                 background-color: rgb(208, 247, 208);
                 margin-left: 4%;
             }
-            .myContainerIconsEtc{
-            display: flex;
-            flex-wrap: wrap;
-
-                .iconsContainer {
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-basis: content;
-                    margin: 0 4% 0 4%;
-                }
-                
-                .tiempoLeido{
-                    font-size: 14px;
-                    margin-left: 30%;
-                }
-            
-            }    
+            .iconsContainer {
+                display: flex;
+                flex-wrap: wrap;
+                flex-basis: content;
+                margin: 0 4% 4% 8%;
+            } 
+            .tiempoLeido{
+                font-size: 14px;
+                margin-left: 18%;
+                width: max-content;
+            }
+        }    
     }
 }
 
