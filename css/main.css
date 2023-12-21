@@ -61,11 +61,6 @@ body .aside1 {
   width: 15%;
   margin: 10px;
 }
-@media screen and (max-width: 576px) {
-  body .aside1 {
-    display: none;
-  }
-}
 body .aside1 .container {
   border-radius: 5px;
   padding: 13px;
@@ -146,4 +141,21 @@ body .aside1 .community .modimg {
 }
 body .aside1 .information {
   margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .aside1 {
+    display: none;
+  }
+  .discussion-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body .aside1 {
+    width: 25%;
+  }
+  body .discussion-container {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

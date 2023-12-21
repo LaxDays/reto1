@@ -1,10 +1,6 @@
 body{
    
     .aside1{
-        @include mobile { 
-            display: none;
-        }
-        
         width: 15%;
         margin: 10px;
         .container{

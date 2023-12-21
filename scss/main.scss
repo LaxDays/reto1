@@ -1,4 +1,4 @@
-@import "./media_queries";
+
 
 * {
     margin: 0;
@@ -10,5 +10,31 @@
 
 
 
+
 @import "AlexisFuentes";
 @import "AngelQuezada";
+@import "./BrayanAlmora"
+
+@media screen and (max-width: 768px){
+    .aside1{
+        display: none;
+    }
+    .discussion-container{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    body {
+        .aside1{
+            width: 25%;
+        
+        }
+        .discussion-container{
+            display: none;
+        }
+    }
+    
+
+
+}
