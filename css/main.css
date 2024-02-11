@@ -7,11 +7,14 @@
 .myPublicacion {
   padding: 10px;
   background-color: white;
+  border-radius: 5px;
 }
 
 .btnTitulo{
   min-width: 615px;
   margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: whitesmoke;
 }
 
 .btnPublicar{
@@ -24,12 +27,15 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 5px
 }
 
 .textarea{
   min-height: 200px;
   min-width: 615px;
   resize: none;
+  border-radius: 5px;
+  background-color: whitesmoke;
 }
 
 
