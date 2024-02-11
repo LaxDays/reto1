@@ -4,6 +4,51 @@
   box-sizing: border-box;
 }
 
+.myPublicacion {
+  padding: 10px;
+  background-color: white;
+}
+
+.btnTitulo{
+  min-width: 615px;
+  margin-bottom: 10px;
+}
+
+.btnPublicar{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: end;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.textarea{
+  min-height: 200px;
+  min-width: 615px;
+  resize: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body .navBar {
   background-color: white;
   z-index: 10;
@@ -67,7 +112,7 @@ main article .myContainerIconsEtc .iconsContainer {
 }
 main article .myContainerIconsEtc .tiempoLeido {
   font-size: 14px;
-  margin-left: 18%;
+  margin-left: 15%;
   width: -moz-max-content;
   width: max-content;
 }

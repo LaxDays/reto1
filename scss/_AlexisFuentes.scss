@@ -18,10 +18,10 @@ main {
             }
         }
     }
+    
     article {
         .usuarioPublicacion{
             display:flex;
-           
             .imagenProgramador{
                 margin: 4% ;
                 margin-bottom: 2%;
@@ -37,6 +37,7 @@ main {
                 margin: 1% 0% 0% 10px;
             }
         }
+        
         
         
         .myContainerIconsEtc{
@@ -58,9 +59,14 @@ main {
             } 
             .tiempoLeido{
                 font-size: 14px;
-                margin-left: 18%;
+                margin-left: 15%;
                 width: max-content;
             }
         }    
     }
+}
+
+
+.myPublicacion {
+    background-color: red;
 }
