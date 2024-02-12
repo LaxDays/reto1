@@ -1,0 +1,17 @@
+body{
+    .mySearchContainerFlex{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 13px;
+        #searchInput{
+            border-radius: 5px;
+            padding-left: 5px;
+        }
+        #searchBtn{
+            background-color: whitesmoke;
+            border-radius: 50%;
+            border: none;
+            padding: 5px;
+        }
+    }
+}
