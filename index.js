@@ -38,10 +38,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+// Toma los datos, los transforma en string y los guarda en el local storage
     salvarDatosToLocalStorage = () => {
         localStorage.setItem("formData",JSON.stringify(baseDatosLocal));
     }
 
+/*
+Se encarga de:
+1. Limpiar lo publicado actualmente.
+2. Crear botones y divs.
+3. Darle clases a los botones y divs.
+4. Colocar el texto con textContent a publicación y título. Así como escribir dentro de los botones.
+5. Hacer la escucha de las funciones editar y eliminar.
+6. Colocar todo con append.
+*/
     renderPublicacion = () => {
         divRegistroPadreJS.innerHTML = "";
         divRegistroHijoJS.innerHTML = "";
@@ -83,6 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+/*
+a) Entra a local para tomar el valor del array.
+b) El valor de titulo se comola en el input donde va el titulo.
+c) El valor de publicación se coloca donde va la publicación.
+d) splice elimina lo que estaba antes.
+e) se llama función salvarDatosToLocalStorage para guardar datos nuevos.
+f) se llama función renderPublicacion para pulblicar los datos nuevos.
+*/
     btnEditarDatos = (valor) => {
         const key1 = baseDatosLocal[valor];
         inputTituloJS.value = key1.valorTitulo;
@@ -92,7 +110,11 @@ document.addEventListener("DOMContentLoaded", () => {
         renderPublicacion();
     } 
     
-
+/*
+Se ingresa a la base de datos y se elimina con Splice
+e) se llama función salvarDatosToLocalStorage para guardar datos nuevos.
+f) se llama función renderPublicacion para pulblicar los datos nuevos.
+*/
     btnEliminarDatos = (valor) => {
         baseDatosLocal.splice(valor, 1);
         salvarDatosToLocalStorage();
