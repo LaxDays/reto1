@@ -4,57 +4,6 @@
   box-sizing: border-box;
 }
 
-.myPublicacion {
-  padding: 10px;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.btnTitulo{
-  min-width: 615px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  background-color: whitesmoke;
-}
-
-.btnPublicar{
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 7px 16px;
-  text-align: end;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px
-}
-
-.textarea{
-  min-height: 200px;
-  min-width: 615px;
-  resize: none;
-  border-radius: 5px;
-  background-color: whitesmoke;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body .navBar {
   background-color: white;
   z-index: 10;
@@ -207,6 +156,75 @@ body .aside1 .community .modimg {
 }
 body .aside1 .information {
   margin: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .myFlexContainer {
+  display: flex;
+  flex-direction: column;
+}
+body .myFlexContainer .myDivFormulario .myForm {
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+body .myFlexContainer .myDivFormulario .myForm .myContenedorTitulo .myInputTitulo {
+  border-radius: 5px;
+  width: 100%;
+}
+body .myFlexContainer .myDivFormulario .myForm .myContenedorPublicacion .myTextareaPublicacion {
+  resize: none;
+  border-radius: 5px;
+  width: 100%;
+}
+body .myFlexContainer .myDivFormulario .myForm .myBtnInput {
+  padding: 5px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+body .myFlexContainer .myPublicacionesRegistro {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+}
+body .myFlexContainer .myPublicacionesRegistro .myContenedorDePost {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body .myFlexContainer .myPublicacionesRegistro .myContenedorDePost .myContenedorRegistroTitulo {
+  font-weight: 800;
+}
+body .myFlexContainer .myPublicacionesRegistro .myContenedorDePost .myBtnEditar {
+  padding: 2px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+body .myFlexContainer .myPublicacionesRegistro .myContenedorDePost .myBtnEliminar {
+  margin: 5px;
+  padding: 2px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
 }
 
 @media screen and (max-width: 768px) {
