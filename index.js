@@ -1,19 +1,32 @@
+// Hacemos que la carga espere.
 document.addEventListener("DOMContentLoaded", () => {
+
+// Llamamos nuestros querys para trabajar con ellos.
     const formularioJS = document.querySelector(".myForm");
     const inputTituloJS = document.querySelector(".myInputTitulo");
     const inputPublicacionJS = document.querySelector("#myTextareaPublicacionID");
     const divRegistroPadreJS = document.querySelector(".myPublicacionesRegistro");
     const divRegistroHijoJS = document.querySelector(".myPublicacionesRegistroChicas");
     
-
+// Creamos la variable que parsea y obtiene los datos del Local Storage, si no, la crea.
     let baseDatosLocal = JSON.parse(localStorage.getItem("formData")) || [];
 
+// Creamos  la interacción al darle click a "publicar".
     formularioJS.addEventListener("submit", function(e) {
+
+// Previene que el navegador actue "normalmente".
         e.preventDefault();
 
+// Le pasamos los valores de título y publicación a dos constantes para trabajarlas.
         const valorTitulo = inputTituloJS.value;
         const valorPublicacion = inputPublicacionJS.value;
 
+// Sí el valor de input y publicación contienen algo, le entramos.
+// if crea una constante para almacenar el obj de lo que vale titulo y publicacion (ambos en una),
+//      para despues hacerle push a la base de datos.
+// Se llaman las funciones funcionadoras salvarDatosToLocalStorage y renderPublicacion.
+// El formulario se puede vaciar con el reset ahora si.
+// else esta ahí por si alguno de los espacios esta vacio.
         if(valorTitulo && valorPublicacion) {
             const valorAmbosDatos = {valorTitulo,valorPublicacion};
             baseDatosLocal.push(valorAmbosDatos);
@@ -25,15 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
-    function salvarDatosToLocalStorage() {
+    salvarDatosToLocalStorage = () => {
         localStorage.setItem("formData",JSON.stringify(baseDatosLocal));
     }
 
-    function renderPublicacion() {
+    renderPublicacion = () => {
         divRegistroPadreJS.innerHTML = "";
         divRegistroHijoJS.innerHTML = "";
 
-        baseDatosLocal.forEach(function (key, valor){
+        baseDatosLocal.forEach((key, valor) => {
             const btnEditar = document.createElement("button");
             const btnEliminar = document.createElement("button");
             const contenedorBtns = document.createElement("div");
@@ -53,11 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
             btnEliminar.textContent = "Eliminar";
             btnEditar.textContent = "Editar";
 
-            btnEditar.addEventListener("click", function(){
+            btnEditar.addEventListener("click", () => {
                 btnEditarDatos(valor);
             })
            
-            btnEliminar.addEventListener("click", function(){
+            btnEliminar.addEventListener("click", () => {
                 btnEliminarDatos(valor);
             })
 
@@ -70,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    function btnEditarDatos(valor){
+    btnEditarDatos = (valor) => {
         const key1 = baseDatosLocal[valor];
         inputTituloJS.value = key1.valorTitulo;
         inputPublicacionJS.value = key1.valorPublicacion;
@@ -80,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } 
     
 
-    function btnEliminarDatos(valor){
+    btnEliminarDatos = (valor) => {
         baseDatosLocal.splice(valor, 1);
         salvarDatosToLocalStorage();
         renderPublicacion();
@@ -90,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const valorBusqueda = inputBusqueda.value.toLowerCase();
 
         const publicacionesFiltradas = baseDatosLocal.filter(publicacion => {
-            return publicacion.valorTitulo.toLowerCase().includes(valorBusqueda);
+            return publicacion.valorTitulo.toLowerCase().includes(valorBusqueda) 
         });
 
         // Renderizar las publicaciones filtradas
@@ -110,6 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
             articuloPublicacion.textContent = publicacion.valorPublicacion;
             contenedorPublicacion.appendChild(articuloPublicacion);
             divRegistroPadreJS.appendChild(contenedorPublicacion);
+
+           
         });
 
     });

@@ -161,20 +161,14 @@ body .aside1 .information {
   margin: 10px;
 }
 
-body .mySearchContainerFlex {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 13px;
+body .mySearchContainer {
+  margin-bottom: 6px;
 }
-body .mySearchContainerFlex #searchInput {
+body .mySearchContainer #inputBusqueda {
   border-radius: 5px;
   padding-left: 5px;
-}
-body .mySearchContainerFlex #searchBtn {
-  background-color: whitesmoke;
-  border-radius: 50%;
-  border: none;
-  padding: 5px;
+  margin-left: 10px;
+  width: 100%;
 }
 
 body {
