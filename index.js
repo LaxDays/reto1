@@ -112,8 +112,8 @@ f) se llama función renderPublicacion para pulblicar los datos nuevos.
     
 /*
 Se ingresa a la base de datos y se elimina con Splice
-e) se llama función salvarDatosToLocalStorage para guardar datos nuevos.
-f) se llama función renderPublicacion para pulblicar los datos nuevos.
+I) se llama función salvarDatosToLocalStorage para guardar datos nuevos.
+II) se llama función renderPublicacion para pulblicar los datos nuevos.
 */
     btnEliminarDatos = (valor) => {
         baseDatosLocal.splice(valor, 1);
@@ -128,9 +128,9 @@ f) se llama función renderPublicacion para pulblicar los datos nuevos.
             return publicacion.valorTitulo.toLowerCase().includes(valorBusqueda) 
         });
 
-        // Renderizar las publicaciones filtradas
+        // Renderizar las publicaciones buscadas
         divRegistroPadreJS.innerHTML = "";
-        publicacionesFiltradas.forEach(publicacion => {
+        publicacionesFiltradas.forEach((publicacion) => {
 
             const contenedorPublicacion = document.createElement("div");
             contenedorPublicacion.className = "myContenedorDePost";
@@ -140,12 +140,24 @@ f) se llama función renderPublicacion para pulblicar los datos nuevos.
             contenedorPublicacion.appendChild(articuloTitulo);
             divRegistroPadreJS.appendChild(contenedorPublicacion);
 
+            const btnEditar = document.createElement("button");
+            const btnEliminar = document.createElement("button");
+            const contenedorBtns = document.createElement("div");
+            contenedorBtns.className = "myContenedorBtns";
+            btnEditar.className ="myBtnEditar";
+            btnEliminar.className ="myBtnEliminar";
+            btnEliminar.textContent = "Eliminar";
+            btnEditar.textContent = "Editar";
+
             const articuloPublicacion = document.createElement("div");
             articuloPublicacion.className ="myContenedorRegistroPublicacion";
             articuloPublicacion.textContent = publicacion.valorPublicacion;
             contenedorPublicacion.appendChild(articuloPublicacion);
-            divRegistroPadreJS.appendChild(contenedorPublicacion);
+            divRegistroPadreJS.prepend(contenedorPublicacion);
 
+            contenedorPublicacion.appendChild(contenedorBtns);
+            contenedorBtns.appendChild(btnEditar);
+            contenedorBtns.appendChild(btnEliminar);
            
         });
 
@@ -197,11 +209,24 @@ f) se llama función renderPublicacion para pulblicar los datos nuevos.
             contenedorPublicacion.appendChild(articuloTitulo);
             divRegistroPadreJS.appendChild(contenedorPublicacion);
 
+            const btnEditar = document.createElement("button");
+            const btnEliminar = document.createElement("button");
+            const contenedorBtns = document.createElement("div");
+            contenedorBtns.className = "myContenedorBtns";
+            btnEditar.className ="myBtnEditar";
+            btnEliminar.className ="myBtnEliminar";
+            btnEliminar.textContent = "Eliminar";
+            btnEditar.textContent = "Editar";
+
             const articuloPublicacion = document.createElement("div");
             articuloPublicacion.className ="myContenedorRegistroPublicacion";
             articuloPublicacion.textContent = publicacion.valorPublicacion;
             contenedorPublicacion.appendChild(articuloPublicacion);
-            divRegistroPadreJS.appendChild(contenedorPublicacion);
+            divRegistroPadreJS.prepend(contenedorPublicacion);
+
+            contenedorPublicacion.appendChild(contenedorBtns);
+            contenedorBtns.appendChild(btnEditar);
+            contenedorBtns.appendChild(btnEliminar);
         });
     });
 
