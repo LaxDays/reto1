@@ -121,6 +121,8 @@ II) se llama función renderPublicacion para pulblicar los datos nuevos.
         renderPublicacion();
     }
 
+// SEARCH EMPIEZA
+
     inputBusqueda.addEventListener("input", function() {
         const valorBusqueda = inputBusqueda.value.toLowerCase();
 
@@ -128,7 +130,6 @@ II) se llama función renderPublicacion para pulblicar los datos nuevos.
             return publicacion.valorTitulo.toLowerCase().includes(valorBusqueda) 
         });
 
-        // Renderizar las publicaciones buscadas
         divRegistroPadreJS.innerHTML = "";
         publicacionesFiltradas.forEach((publicacion) => {
 
@@ -163,6 +164,10 @@ II) se llama función renderPublicacion para pulblicar los datos nuevos.
 
     });
 
+// SEARCH FIN
+
+
+// FILTRO EMPIEZA
     selectFiltroFecha.addEventListener("change", function() {
         const filtro = selectFiltroFecha.value;
 
@@ -171,10 +176,17 @@ II) se llama función renderPublicacion para pulblicar los datos nuevos.
         switch(filtro) {
             case 'semana':
                 publicacionesFiltradas = baseDatosLocal.filter(publicacion => {
+                    new Date(publicacion.fecha);
+                    const hoy = new Date();
+                    new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate() - 7);
+                    return publicacionesFiltradas = baseDatosLocal;
+                });
+            case 'semana':
+                publicacionesFiltradas = baseDatosLocal.filter(publicacion => {
                     const fechaPublicacion = new Date(publicacion.fecha);
                     const hoy = new Date();
                     const unaSemanaAtras = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate() - 7);
-                    return publicacionesFiltradas = baseDatosLocal;
+                    return fechaPublicacion = unaSemanaAtras;
                 });
                 break;
             case 'mes':
@@ -198,7 +210,6 @@ II) se llama función renderPublicacion para pulblicar los datos nuevos.
                 break;
         }
 
-        // Renderizar las publicaciones filtradas
         divRegistroPadreJS.innerHTML = "";
         publicacionesFiltradas.forEach(publicacion => {
             const contenedorPublicacion = document.createElement("div");
@@ -229,7 +240,7 @@ II) se llama función renderPublicacion para pulblicar los datos nuevos.
             contenedorBtns.appendChild(btnEliminar);
         });
     });
-
+// FILTRO TERMINA
     renderPublicacion();
 
 
